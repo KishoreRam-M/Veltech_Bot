@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sports_001",
+    "text": "Vel Tech Multi Tech Engineering College has dedicated sports facilities including a cricket ground, football field, basketball court, volleyball court, badminton courts (indoor and outdoor), table tennis room, and a gymnasium. The college encourages students to participate in inter-college and university-level tournaments.",
+    "keywords": ["cricket", "football", "basketball", "volleyball", "badminton", "gym"]
+  },
+  {
+    "id": "sports_002",
+    "text": "The college has a Physical Education department with qualified coaches for major sports. Annual sports day is conducted with track and field events, team sports, and individual competitions. Winners represent the college at Anna University zone-level and inter-zone tournaments. The college has produced several university-level players.",
+    "keywords": ["sports day", "coach", "anna university", "tournament", "athletics"]
+  },
+  {
+    "id": "sports_003",
+    "text": "Indoor sports facilities include table tennis, chess, carrom, and a modern gymnasium with cardio and weight training equipment. The gym is open from 6 AM to 8 PM for students and staff. Yoga and fitness sessions are conducted regularly as part of the wellness program.",
+    "keywords": ["indoor", "table tennis", "chess", "gymnasium", "yoga", "fitness"]
+  }
+]

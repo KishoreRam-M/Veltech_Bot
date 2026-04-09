@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VelBot - AI Admissions Counselor for Vel Tech Multi Tech Engineering College, Chennai. Ask about courses, admissions, fees, placements, and campus life.">
+    <title>VelBot — AI Admissions Counselor | Vel Tech Multi Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container" id="app">
+        <div class="bg-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+
+        <header class="header glass-panel" id="header">
+            <div class="header-left">
+                <img src="/static/assets/logo.png" alt="VelBot" class="logo" id="logo">
+                <div class="header-text">
+                    <h1>VelBot</h1>
+                    <p class="subtitle">AI Admissions Counselor</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="status-indicator" id="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Connecting...</span>
+                </div>
+                <div class="lang-badge" id="lang-badge" title="Detected language">EN</div>
+            </div>
+        </header>
+
+        <main class="chat-area" id="chat-area">
+            <div class="chat-messages" id="chat-messages">
+                <div class="welcome-card glass-panel" id="welcome-card">
+                    <div class="welcome-icon">🎓</div>
+                    <h2>Welcome to Vel Tech Multi Tech</h2>
+                    <p>I'm VelBot, your AI Admissions Counselor. Ask me anything about our college!</p>
+                    <div class="quick-actions" id="quick-actions">
+                        <button class="quick-btn" data-query="What courses are offered?">📚 Courses</button>
+                        <button class="quick-btn" data-query="How to apply for admission?">📝 Admissions</button>
+                        <button class="quick-btn" data-query="What are the fees?">💰 Fees</button>
+                        <button class="quick-btn" data-query="Tell me about placements">💼 Placements</button>
+                        <button class="quick-btn" data-query="What hostel facilities are available?">🏠 Hostel</button>
+                        <button class="quick-btn" data-query="What is the campus infrastructure like?">🏛️ Campus</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="input-area glass-panel" id="input-area">
+            <div class="input-wrapper">
+                <button class="voice-btn" id="voice-btn" title="Voice input (Chrome recommended)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                        <line x1="12" y1="19" x2="12" y2="23"/>
+                        <line x1="8" y1="23" x2="16" y2="23"/>
+                    </svg>
+                </button>
+                <input type="text" id="chat-input" placeholder="Ask about courses, admissions, fees, placements..." autocomplete="off" maxlength="500">
+                <button class="send-btn" id="send-btn" title="Send message">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </div>
+            <p class="input-hint">Press Enter to send • Click 🎤 for voice input • Supports Tamil & English</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

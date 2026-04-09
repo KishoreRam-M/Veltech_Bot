@@ -1,0 +1,26 @@
+[project]
+name = "veltech-counselor"
+version = "2.0.0"
+description = "AI Admissions Counselor for Vel Tech Multi Tech Engineering College - Hybrid Intel-Optimized"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "google-genai>=1.0.0",
+    "rank-bm25>=0.2.2",
+    "numpy>=1.26.0,<2.0.0",
+    "python-dotenv>=1.0.0",
+    "sentence-transformers>=3.0.0",
+    "aiofiles>=24.1.0",
+    "faiss-cpu>=1.7.4",
+    "psutil>=5.9.0",
+    "pyttsx3>=2.90",
+    "transformers>=4.38.0",
+    "accelerate>=0.27.0",
+    "sentencepiece>=0.1.99",
+    "python-multipart>=0.0.9",
+]
+
+[tool.uv]
+extra-index-url = ["https://download.pytorch.org/whl/cpu"]

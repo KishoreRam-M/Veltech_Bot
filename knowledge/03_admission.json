@@ -1,0 +1,27 @@
+[
+  {
+    "id": "admission_001",
+    "text": "Admission to B.Tech programs at Vel Tech Multi Tech Engineering College is through two main channels: (1) TNEA Counselling - Based on HSC (+2) marks, conducted by Anna University for Tamil Nadu students. (2) Management Quota - Direct admission through the college for students from other states or those who prefer direct admission. Both channels require completion of 12th standard (HSC/CBSE/ICSE) with Physics, Chemistry, and Mathematics.",
+    "keywords": ["admission", "tnea", "counselling", "hsc", "management quota", "12th"]
+  },
+  {
+    "id": "admission_002",
+    "text": "Eligibility criteria for B.Tech admission: Candidates must have passed 12th standard (HSC/CBSE/ICSE) with Physics, Chemistry, and Mathematics as core subjects with a minimum aggregate of 45% (40% for reserved categories). For lateral entry, candidates must hold a diploma in engineering or B.Sc degree with 50% aggregate.",
+    "keywords": ["eligibility", "12th", "percentage", "marks", "diploma", "lateral"]
+  },
+  {
+    "id": "admission_003",
+    "text": "For M.Tech admission, candidates must have a valid TANCET score or GATE score along with a B.Tech/B.E degree in the relevant discipline with minimum 50% aggregate. MBA admissions are based on TANCET/MAT/CAT scores with a bachelor's degree in any discipline.",
+    "keywords": ["mtech", "tancet", "gate", "mba", "mat", "cat", "postgraduate"]
+  },
+  {
+    "id": "admission_004",
+    "text": "The admission process involves: (1) Online application submission through the college website or TNEA portal. (2) Document verification including marksheets, community certificate, transfer certificate, and Aadhaar. (3) Counselling/interview for management quota. (4) Fee payment and confirmation of admission. (5) Reporting to the college on the specified date. The academic year typically begins in August-September.",
+    "keywords": ["process", "application", "documents", "verification", "counselling", "fee payment"]
+  },
+  {
+    "id": "admission_005",
+    "text": "NRI and international students can apply through the NRI quota with appropriate documentation including passport, visa, and equivalence certificate from the Association of Indian Universities (AIU). Supernumerary seats are available for NRI candidates. Contact the international admissions office at admissions@veltechmultitech.org for detailed guidance.",
+    "keywords": ["nri", "international", "foreign", "passport", "visa", "supernumerary"]
+  }
+]

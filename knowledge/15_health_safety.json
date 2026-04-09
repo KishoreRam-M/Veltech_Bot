@@ -1,0 +1,17 @@
+[
+  {
+    "id": "health_001",
+    "text": "The college has a first-aid center with a trained nurse available during working hours (9 AM - 5 PM). Basic medicines, first-aid supplies, and a stretcher are available. For emergencies, the college has tie-ups with nearby hospitals including Avadi Government Hospital and private hospitals. An ambulance facility is available for emergencies.",
+    "keywords": ["first aid", "nurse", "medicine", "hospital", "ambulance", "emergency"]
+  },
+  {
+    "id": "health_002",
+    "text": "Regular health checkups are conducted for all students at the beginning of each academic year. The college organizes blood donation camps, health awareness programs, and yoga/meditation sessions. Group medical insurance is available for students at subsidized rates through the college. Mental health counseling services are provided by trained counselors.",
+    "keywords": ["health checkup", "blood donation", "insurance", "counseling", "mental health"]
+  },
+  {
+    "id": "health_003",
+    "text": "Safety measures include: 24/7 CCTV surveillance across the campus including entrances, corridors, labs, and parking areas. Security guards are posted at all entry/exit points with visitor registration. Fire safety equipment (extinguishers, alarms, sprinklers) is installed in all buildings. Regular fire drills and safety awareness programs are conducted. Anti-ragging committee actively monitors and ensures a ragging-free campus.",
+    "keywords": ["cctv", "security", "fire safety", "anti-ragging", "surveillance", "guards"]
+  }
+]

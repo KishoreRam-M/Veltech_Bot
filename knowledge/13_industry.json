@@ -1,0 +1,17 @@
+[
+  {
+    "id": "industry_001",
+    "text": "Vel Tech Multi Tech Engineering College has signed MoUs (Memoranda of Understanding) with leading companies including TCS (Tata Consultancy Services), Infosys, ICT Academy, NASSCOM, Texas Instruments, and AWS Academy. These partnerships enable industry-aligned curriculum updates, student internships, faculty training, and joint research projects.",
+    "keywords": ["mou", "tcs", "infosys", "ict academy", "nasscom", "partnership"]
+  },
+  {
+    "id": "industry_002",
+    "text": "The college has an Innovation and Incubation Center that supports student and faculty startups. The center provides co-working space, mentorship from industry experts, networking opportunities, and guidance for patent filing and government startup schemes. Several projects have received funding from TNSCST (Tamil Nadu State Council for Science and Technology).",
+    "keywords": ["innovation", "incubation", "startup", "patent", "tnscst", "funding"]
+  },
+  {
+    "id": "industry_003",
+    "text": "Industry-sponsored labs include: TCS iON Digital Learning Hub, Infosys Campus Connect Program, AWS Academy Cloud Computing Lab, and NVIDIA GPU Computing Center. These labs provide students with industry-standard tools, certifications, and real-world project experience. Students completing these programs receive industry-recognized certificates.",
+    "keywords": ["tcs ion", "infosys campus connect", "aws", "nvidia", "certification", "sponsored lab"]
+  }
+]

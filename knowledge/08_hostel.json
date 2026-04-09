@@ -1,0 +1,27 @@
+[
+  {
+    "id": "hostel_001",
+    "text": "Vel Tech Multi Tech Engineering College provides separate hostel facilities for boys and girls within/near the campus. The boys' hostel and girls' hostel are managed by dedicated wardens and support staff. Hostel admission is on a first-come, first-served basis and priority is given to outstation students.",
+    "keywords": ["hostel", "boys", "girls", "warden", "accommodation"]
+  },
+  {
+    "id": "hostel_002",
+    "text": "Hostel fees are approximately ₹50,000 to ₹80,000 per year depending on room type (2-sharing, 3-sharing, or 4-sharing). This includes accommodation, mess food (3 meals + evening snacks), and basic amenities like bed, cupboard, table, and chair. AC rooms are available at an additional cost.",
+    "keywords": ["hostel fees", "room", "sharing", "mess", "ac room"]
+  },
+  {
+    "id": "hostel_003",
+    "text": "Hostel amenities include: 24/7 hot water supply, Wi-Fi connectivity, common room with TV and indoor games, laundry service, RO purified drinking water, study room, and power backup. The hostel has CCTV surveillance and security guards at the entrance for safety.",
+    "keywords": ["amenities", "wifi", "hot water", "laundry", "study room", "security"]
+  },
+  {
+    "id": "hostel_004",
+    "text": "The mess serves South Indian and North Indian cuisine with a weekly rotating menu. Breakfast, lunch, dinner, and evening snacks are provided. Special dietary requirements (Jain, vegetarian) can be accommodated upon request. The mess committee includes student representatives to ensure food quality. Mess timings: Breakfast 7:00-9:00 AM, Lunch 12:30-2:00 PM, Snacks 4:30-5:30 PM, Dinner 7:30-9:00 PM.",
+    "keywords": ["mess", "food", "breakfast", "lunch", "dinner", "vegetarian", "menu"]
+  },
+  {
+    "id": "hostel_005",
+    "text": "Hostel rules include: mandatory biometric attendance, visiting hours for parents (10 AM - 5 PM on working days, 9 AM - 6 PM on holidays), prior permission required for leave/outing, no vehicles allowed inside hostel premises, and strict prohibition of ragging. Wardens are available 24/7 for any concerns.",
+    "keywords": ["rules", "attendance", "visiting hours", "parents", "leave", "ragging"]
+  }
+]

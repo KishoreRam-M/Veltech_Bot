@@ -1,0 +1,27 @@
+[
+  {
+    "id": "infra_001",
+    "text": "Vel Tech Multi Tech Engineering College campus features modern infrastructure including smart classrooms equipped with Wi-Fi connectivity, LCD projectors, and digital boards. The campus has central air-conditioning in key academic blocks. The college has multiple academic blocks housing classrooms, laboratories, faculty offices, and seminar halls.",
+    "keywords": ["smart classroom", "wifi", "projector", "academic block", "air conditioning"]
+  },
+  {
+    "id": "infra_002",
+    "text": "The central library has a collection of over 50,000 books, 3,000+ journal subscriptions (print and digital), and access to online databases including IEEE Xplore, Springer, NPTEL, and DELNET. The library has a digital section with 50+ computers for online research, a reading hall with 200+ seating capacity, and operates from 8 AM to 8 PM on working days.",
+    "keywords": ["library", "books", "journals", "ieee", "nptel", "digital", "reading hall"]
+  },
+  {
+    "id": "infra_003",
+    "text": "The college auditorium has a seating capacity of 1,000+ and is equipped with professional sound systems, LED screens, and stage lighting. It hosts college events, seminars, workshops, and cultural programs. Additionally, there are two seminar halls with 200+ capacity each for department-level events.",
+    "keywords": ["auditorium", "seminar hall", "events", "capacity", "sound system"]
+  },
+  {
+    "id": "infra_004",
+    "text": "The campus has 24/7 Wi-Fi connectivity with high-speed internet access (100+ Mbps leased line). All academic and hostel areas are covered under the Wi-Fi network. The IT infrastructure is managed by a dedicated networking team ensuring uninterrupted connectivity for students and faculty.",
+    "keywords": ["wifi", "internet", "broadband", "connectivity", "network"]
+  },
+  {
+    "id": "infra_005",
+    "text": "Other facilities include a dedicated parking area, canteen serving hygienic meals, a stationery shop, a bank ATM on campus, photocopy and printing center, and a fully equipped first-aid center. The campus is CCTV-monitored with 24/7 security personnel for safety.",
+    "keywords": ["canteen", "parking", "atm", "security", "cctv", "first aid"]
+  }
+]

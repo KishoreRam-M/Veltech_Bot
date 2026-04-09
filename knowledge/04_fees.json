@@ -1,0 +1,27 @@
+[
+  {
+    "id": "fees_001",
+    "text": "B.Tech tuition fees at Vel Tech Multi Tech Engineering College range from approximately ₹1,00,000 to ₹1,50,000 per year depending on the program and admission category. Government quota students (TNEA) pay fees as fixed by the Fee Fixation Committee of Tamil Nadu. Management quota fees may be higher as per college norms.",
+    "keywords": ["btech", "tuition", "fees", "per year", "government", "management"]
+  },
+  {
+    "id": "fees_002",
+    "text": "M.Tech program fees are approximately ₹50,000 to ₹80,000 per year. MBA program fees are approximately ₹80,000 to ₹1,00,000 per year. Lateral entry students pay the same fees as regular B.Tech students for the remaining semesters.",
+    "keywords": ["mtech", "mba", "lateral", "postgraduate", "fees"]
+  },
+  {
+    "id": "fees_003",
+    "text": "Additional fees include: Exam fees (as per Anna University norms, approximately ₹2,000-3,000 per semester), Lab fees (₹3,000-5,000 per year for intensive lab courses), Library fees (₹1,000-2,000 per year), and Transport fees (₹25,000-45,000 per year depending on distance). Hostel fees are charged separately.",
+    "keywords": ["exam fees", "lab fees", "library", "transport", "additional"]
+  },
+  {
+    "id": "fees_004",
+    "text": "Scholarships available include: (1) Government scholarships for SC/ST/BC/MBC students through Tamil Nadu government welfare departments. (2) Merit scholarships for students scoring above 90% in 12th standard. (3) Sports scholarships for state/national level athletes. (4) Management scholarships for economically weaker sections. Students should contact the scholarship cell for current availability and application procedures.",
+    "keywords": ["scholarship", "merit", "sports", "government", "sc", "st", "bc", "mbc"]
+  },
+  {
+    "id": "fees_005",
+    "text": "Fee payment can be made through: (1) Online payment via the college portal using net banking, credit/debit cards, or UPI. (2) Demand Draft in favor of 'Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College'. (3) Direct bank transfer to the college account. Installment options are available — students can pay in 2-3 installments per semester with prior approval from the accounts department.",
+    "keywords": ["payment", "online", "demand draft", "installment", "bank transfer", "upi"]
+  }
+]

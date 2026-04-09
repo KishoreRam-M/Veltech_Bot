@@ -1,0 +1,27 @@
+[
+  {
+    "id": "place_001",
+    "text": "Vel Tech Multi Tech Engineering College maintains a strong placement record with approximately 75-80% of eligible students getting placed every year. The Training and Placement Cell actively coordinates with 100+ companies for campus recruitment. The placement season typically runs from August to April each year.",
+    "keywords": ["placement", "percentage", "training", "placement cell", "campus recruitment"]
+  },
+  {
+    "id": "place_002",
+    "text": "The average salary package for placed students is approximately ₹3.0 to ₹4.5 LPA (Lakhs Per Annum). The highest package offered has been approximately ₹12 LPA. CSE and AI&DS students typically receive higher packages due to strong IT sector demand. Mechanical and Civil engineering students receive packages in the range of ₹2.5 to ₹3.5 LPA.",
+    "keywords": ["salary", "package", "lpa", "highest", "average", "ctc"]
+  },
+  {
+    "id": "place_003",
+    "text": "Top recruiting companies include: IT/Software — TCS, Infosys, Wipro, Cognizant, HCL Technologies, Tech Mahindra, Zoho Corporation, Accenture, Capgemini, Mphasis, and Mindtree. Core Engineering — L&T, Ashok Leyland, TVS Motor, Hyundai, Sundaram Fasteners. Banking/Finance — HDFC Bank, ICICI Bank, Axis Bank.",
+    "keywords": ["tcs", "infosys", "wipro", "zoho", "cognizant", "hcl", "accenture", "companies", "recruiters"]
+  },
+  {
+    "id": "place_004",
+    "text": "The Training and Placement Cell provides pre-placement training including: aptitude and reasoning workshops, group discussion practice, mock interviews, resume building sessions, soft skills and communication training, technical skill workshops (coding, problem-solving), and personality development programs. Training begins from the 2nd year itself.",
+    "keywords": ["training", "aptitude", "mock interview", "resume", "soft skills", "coding"]
+  },
+  {
+    "id": "place_005",
+    "text": "Internship opportunities are facilitated by the placement cell with companies like TCS, Infosys, and local startups. Summer internships (6-8 weeks) are available after the 2nd and 3rd years. Many students convert their internships into full-time job offers. The college also supports students in applying for internships through platforms like Internshala and LinkedIn.",
+    "keywords": ["internship", "summer", "tcs", "infosys", "startup", "internshala", "linkedin"]
+  }
+]

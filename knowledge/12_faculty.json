@@ -1,0 +1,22 @@
+[
+  {
+    "id": "faculty_001",
+    "text": "Vel Tech Multi Tech Engineering College has a dedicated faculty team of 200+ members across all departments. Approximately 30% of faculty hold Ph.D. degrees, and many others are pursuing their doctorates. The student-to-faculty ratio is maintained at approximately 15:1 across most departments.",
+    "keywords": ["faculty", "phd", "ratio", "professors", "staff"]
+  },
+  {
+    "id": "faculty_002",
+    "text": "Faculty members actively engage in research and publication. The college encourages research by providing seed funding, reducing teaching loads for active researchers, and supporting attendance at national and international conferences. Several faculty members have published papers in Scopus-indexed and SCI journals.",
+    "keywords": ["research", "publication", "scopus", "sci", "journal", "conference"]
+  },
+  {
+    "id": "faculty_003",
+    "text": "Each department is headed by a Head of Department (HOD) with significant academic and industry experience. The Principal provides overall academic leadership. Faculty participate in regular FDP (Faculty Development Programs) to stay updated with latest technologies and teaching methodologies. Industry professionals are invited as adjunct faculty for specialized courses.",
+    "keywords": ["hod", "principal", "fdp", "industry", "experience", "leadership"]
+  },
+  {
+    "id": "faculty_004",
+    "text": "Faculty mentoring system assigns each student a faculty mentor who guides them throughout their academic journey. Mentors help with academic planning, career guidance, personal counseling, and connecting students with industry opportunities. Regular mentoring sessions are conducted every two weeks.",
+    "keywords": ["mentor", "counseling", "guidance", "academic", "career", "personal"]
+  }
+]

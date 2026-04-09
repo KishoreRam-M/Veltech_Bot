@@ -1,0 +1,42 @@
+[
+  {
+    "id": "course_001",
+    "text": "Vel Tech Multi Tech Engineering College offers the following B.Tech (4-year) undergraduate programs: Computer Science and Engineering (CSE), Artificial Intelligence and Data Science (AI&DS), Information Technology (IT), Electronics and Communication Engineering (ECE), Electrical and Electronics Engineering (EEE), Mechanical Engineering, Civil Engineering, and Computer Science and Business Systems (CSBS). Each program is affiliated to Anna University and follows the Anna University curriculum.",
+    "keywords": ["btech", "undergraduate", "cse", "ai", "data science", "it", "ece", "eee", "mechanical", "civil", "csbs"]
+  },
+  {
+    "id": "course_002",
+    "text": "The college offers M.Tech (2-year) postgraduate programs in Computer Science and Engineering, VLSI Design, Structural Engineering, and Power Electronics. M.Tech programs are designed for students who wish to specialize further and pursue research-oriented careers.",
+    "keywords": ["mtech", "postgraduate", "vlsi", "structural", "power electronics", "research"]
+  },
+  {
+    "id": "course_003",
+    "text": "Lateral Entry (Direct Second Year) admissions are available for B.Tech programs for diploma holders and B.Sc graduates. Students can join directly in the second year (3rd semester) through lateral entry, reducing the total duration to 3 years. This is available in CSE, IT, ECE, EEE, Mechanical, and Civil Engineering programs.",
+    "keywords": ["lateral entry", "diploma", "direct second year", "bsc"]
+  },
+  {
+    "id": "course_004",
+    "text": "B.Tech Computer Science and Engineering (CSE) is the most popular program with strong placement records. The curriculum covers programming (C, C++, Java, Python), data structures, algorithms, database management systems, operating systems, computer networks, software engineering, machine learning, cloud computing, and cybersecurity. Students complete industry-relevant projects in their final year.",
+    "keywords": ["cse", "computer science", "programming", "python", "java", "machine learning", "cloud computing"]
+  },
+  {
+    "id": "course_005",
+    "text": "B.Tech Artificial Intelligence and Data Science (AI&DS) is a specialized program covering artificial intelligence, machine learning, deep learning, natural language processing, computer vision, big data analytics, and data engineering. Students gain hands-on experience with tools like TensorFlow, PyTorch, Hadoop, and Spark.",
+    "keywords": ["ai", "data science", "artificial intelligence", "machine learning", "deep learning", "tensorflow"]
+  },
+  {
+    "id": "course_006",
+    "text": "B.Tech Electronics and Communication Engineering (ECE) covers analog and digital electronics, signal processing, communication systems, VLSI design, embedded systems, IoT (Internet of Things), and antenna design. The department has well-equipped labs for circuit design, microprocessor development, and RF communication.",
+    "keywords": ["ece", "electronics", "communication", "vlsi", "embedded", "iot", "signal processing"]
+  },
+  {
+    "id": "course_007",
+    "text": "B.Tech Mechanical Engineering covers thermodynamics, fluid mechanics, manufacturing technology, CAD/CAM, robotics, automobile engineering, and industrial management. Students work with CNC machines, 3D printers, and advanced manufacturing equipment in the workshops and labs.",
+    "keywords": ["mechanical", "thermodynamics", "cad", "cam", "robotics", "manufacturing"]
+  },
+  {
+    "id": "course_008",
+    "text": "The MBA program (2-year) is offered with specializations in Finance, Marketing, Human Resource Management, and Operations Management. The program is designed to develop future business leaders with strong analytical and leadership skills. Industry internships and live projects are mandatory components.",
+    "keywords": ["mba", "finance", "marketing", "hr", "operations", "management", "business"]
+  }
+]

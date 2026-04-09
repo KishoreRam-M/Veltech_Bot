@@ -1,0 +1,27 @@
+[
+  {
+    "id": "labs_001",
+    "text": "The Computer Science and IT departments have state-of-the-art computer labs with 400+ systems running Windows and Linux (Ubuntu). Labs are equipped with Intel i5/i7 processors, 8-16GB RAM, and high-speed LAN connectivity. Software tools include Visual Studio, Eclipse, NetBeans, MATLAB, Python (Anaconda), MySQL, Oracle, and cloud platforms (AWS Academy, Google Cloud).",
+    "keywords": ["computer lab", "systems", "software", "python", "java", "cloud"]
+  },
+  {
+    "id": "labs_002",
+    "text": "The Electronics and Communication lab facilities include a Digital Signal Processing Lab, Microprocessor and Microcontroller Lab, VLSI Design Lab (with Xilinx Vivado and Cadence tools), Communication Systems Lab, and Embedded Systems Lab. Equipment includes oscilloscopes, spectrum analyzers, signal generators, PCB design stations, and FPGA development boards.",
+    "keywords": ["electronics lab", "vlsi", "microprocessor", "embedded", "oscilloscope", "fpga"]
+  },
+  {
+    "id": "labs_003",
+    "text": "The Mechanical Engineering department has workshops and labs including a Manufacturing Technology Lab with CNC machines and 3D printers, Fluid Mechanics and Machinery Lab, Thermal Engineering Lab, CAD/CAM Lab (SolidWorks, AutoCAD, CATIA), Dynamics Lab, and Material Testing Lab with UTM (Universal Testing Machine).",
+    "keywords": ["mechanical lab", "cnc", "3d printer", "cad", "cam", "solidworks", "autocad"]
+  },
+  {
+    "id": "labs_004",
+    "text": "The AI and Data Science lab is equipped with GPU workstations (NVIDIA RTX series) for deep learning training, along with software frameworks like TensorFlow, PyTorch, Keras, and scikit-learn. The lab supports big data processing with Hadoop and Spark clusters. Students also have access to Google Colab Pro accounts for cloud-based computing.",
+    "keywords": ["ai lab", "gpu", "deep learning", "tensorflow", "pytorch", "hadoop"]
+  },
+  {
+    "id": "labs_005",
+    "text": "The Physics, Chemistry, and English labs provide hands-on learning for first-year students. The Physics lab has equipment for optics, mechanics, and electromagnetic experiments. The Chemistry lab is fully equipped for organic, inorganic, and analytical chemistry experiments. The English Communication lab has ORELL software with 60+ systems for improving speaking and listening skills.",
+    "keywords": ["physics lab", "chemistry lab", "english lab", "first year", "communication"]
+  }
+]

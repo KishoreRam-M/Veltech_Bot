@@ -1,0 +1,27 @@
+[
+  {
+    "id": "basic_001",
+    "text": "Vel Tech Multi Tech Dr. Rangarajan Dr. Sakunthala Engineering College is a premier engineering institution located in Avadi, Chennai, Tamil Nadu. Established in 2004, the college is affiliated to Anna University and approved by AICTE (All India Council for Technical Education). The college is named after its founders, Dr. R. Rangarajan and Dr. R. Sakunthala, who envisioned creating a center of excellence in technical education.",
+    "keywords": ["veltech", "multitech", "chennai", "avadi", "established", "2004", "anna university", "aicte"]
+  },
+  {
+    "id": "basic_002",
+    "text": "The college is accredited by NAAC (National Assessment and Accreditation Council) and several departments have NBA (National Board of Accreditation) accreditation. The institution is committed to providing quality education that meets international standards and is recognized by UGC (University Grants Commission).",
+    "keywords": ["naac", "nba", "accreditation", "ugc", "quality"]
+  },
+  {
+    "id": "basic_003",
+    "text": "The college campus spans approximately 7 acres in Avadi, Chennai, with modern infrastructure including air-conditioned classrooms, well-equipped laboratories, a central library, auditorium, and sports facilities. The campus is well-connected by public transport and is near Avadi Railway Station and various bus routes.",
+    "keywords": ["campus", "acre", "avadi", "infrastructure", "location"]
+  },
+  {
+    "id": "basic_004",
+    "text": "The vision of Vel Tech Multi Tech Engineering College is to emerge as a center of excellence in technical education and research, producing competent engineers and technologists who contribute to nation-building. The mission includes imparting quality education, fostering innovation, promoting industry-academia collaboration, and developing socially responsible professionals.",
+    "keywords": ["vision", "mission", "excellence", "education", "research", "innovation"]
+  },
+  {
+    "id": "basic_005",
+    "text": "Vel Tech Multi Tech is part of the prestigious Vel Tech Group of Institutions, which includes Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology (Deemed University), Vel Tech High Tech Dr. Rangarajan Dr. Sakunthala Engineering College, and other sister institutions. This network provides students access to a broader ecosystem of academic resources and opportunities.",
+    "keywords": ["vel tech group", "sister institutions", "deemed university", "network"]
+  }
+]

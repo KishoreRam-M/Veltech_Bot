@@ -1,0 +1,22 @@
+[
+  {
+    "id": "contact_001",
+    "text": "Vel Tech Multi Tech Dr. Rangarajan Dr. Sakunthala Engineering College is located at: No. 42, Avadi-Vel Tech Road, Vel Nagar, Avadi, Chennai - 600062, Tamil Nadu, India. The campus is situated near Avadi, which is in the northwestern part of Chennai metropolitan area.",
+    "keywords": ["address", "location", "avadi", "chennai", "vel nagar", "600062"]
+  },
+  {
+    "id": "contact_002",
+    "text": "Contact details - Phone: 044-2684 0070, 044-2684 0071. Email: info@veltechmultitech.org, admissions@veltechmultitech.org. Website: www.veltechmultitech.org. For admission queries, contact the Admission Cell directly at admissions@veltechmultitech.org or call during office hours (9:00 AM to 5:00 PM, Monday to Saturday).",
+    "keywords": ["phone", "email", "website", "admission cell", "office hours"]
+  },
+  {
+    "id": "contact_003",
+    "text": "Key contacts - Principal's Office: 044-2684 0070 (Ext: 101). Admission Office: 044-2684 0071. Placement Cell: 044-2684 0070 (Ext: 201). Exam Cell: 044-2684 0070 (Ext: 301). Hostel Warden (Boys): 044-2684 0070 (Ext: 401). Hostel Warden (Girls): 044-2684 0070 (Ext: 402). Transport Office: 044-2684 0070 (Ext: 501).",
+    "keywords": ["principal", "admission office", "placement cell", "exam cell", "hostel warden", "extension"]
+  },
+  {
+    "id": "contact_004",
+    "text": "How to reach: By Train - Get down at Avadi Railway Station (Chennai suburban line) and take an auto-rickshaw (2 km). By Bus - MTC buses from Chennai Central, Koyambedu, and other major bus stands to Avadi. By Road - Take NH205 (Poonamallee High Road) towards Avadi. The college is well-marked with signboards. Google Maps: Search for 'Vel Tech Multi Tech Engineering College, Avadi'.",
+    "keywords": ["how to reach", "train", "bus", "road", "directions", "google maps"]
+  }
+]

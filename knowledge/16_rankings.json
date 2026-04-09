@@ -1,0 +1,17 @@
+[
+  {
+    "id": "rank_001",
+    "text": "Vel Tech Multi Tech Engineering College is accredited by NAAC (National Assessment and Accreditation Council). The college is approved by AICTE and affiliated to Anna University. Several departments have NBA (National Board of Accreditation) accreditation, which is a mark of quality assurance in technical education.",
+    "keywords": ["naac", "aicte", "nba", "anna university", "accreditation"]
+  },
+  {
+    "id": "rank_002",
+    "text": "The college has received various recognitions including: AICTE approval since its inception, consistent performance in Anna University examinations with university rank holders every year, and recognition from professional bodies like ISTE (Indian Society for Technical Education). The institution is also recognized by UGC under Section 2(f).",
+    "keywords": ["recognition", "university rank", "iste", "ugc", "achievement"]
+  },
+  {
+    "id": "rank_003",
+    "text": "Faculty and student achievements include: multiple patents filed and granted, research publications in Scopus/SCI indexed journals, best paper awards at national and international conferences, student project awards at Anna University project exhibitions, and hackathon wins at state and national levels.",
+    "keywords": ["patent", "publication", "award", "achievement", "best paper", "hackathon"]
+  }
+]

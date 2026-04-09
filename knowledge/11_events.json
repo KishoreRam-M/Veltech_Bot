@@ -1,0 +1,22 @@
+[
+  {
+    "id": "events_001",
+    "text": "The college organizes an annual technical symposium that attracts participants from colleges across Tamil Nadu. Events include paper presentations, project exhibitions, coding competitions, robotics challenges, quiz competitions, and debugging contests. Cash prizes and certificates are awarded to winners.",
+    "keywords": ["symposium", "technical", "paper presentation", "project exhibition", "coding competition"]
+  },
+  {
+    "id": "events_002",
+    "text": "The annual cultural festival features events like music performances, dance competitions, fashion shows, mimicry, standup comedy, short film screening, and art exhibitions. Students from various colleges participate. The fest typically spans 2-3 days and includes celebrity performances and DJ nights.",
+    "keywords": ["cultural fest", "music", "dance", "fashion show", "art", "celebrity"]
+  },
+  {
+    "id": "events_003",
+    "text": "Regular workshops and seminars are conducted by departments in collaboration with industry partners. Topics include emerging technologies like AI/ML, cloud computing, blockchain, IoT, and cybersecurity. Guest lectures by industry experts and Anna University professors are organized monthly. FDP (Faculty Development Programs) and STTP (Short Term Training Programs) are also conducted.",
+    "keywords": ["workshop", "seminar", "guest lecture", "fdp", "industry", "technology"]
+  },
+  {
+    "id": "events_004",
+    "text": "National-level hackathons like Smart India Hackathon (SIH) are actively supported by the college. Students have won prizes at SIH and other national competitions. The college also hosts internal hackathons with themes like healthcare, education technology, and sustainable development to promote problem-solving skills.",
+    "keywords": ["hackathon", "smart india", "sih", "national", "competition", "prizes"]
+  }
+]

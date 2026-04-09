@@ -1,0 +1,17 @@
+[
+  {
+    "id": "transport_001",
+    "text": "Vel Tech Multi Tech Engineering College operates a fleet of 20+ buses covering major routes across Chennai and surrounding areas. Bus routes cover areas including Tambaram, Chrompet, Guindy, T. Nagar, Anna Nagar, Ambattur, Poonamallee, Thiruvallur, and surrounding towns. Bus fees range from ₹25,000 to ₹45,000 per year depending on the distance.",
+    "keywords": ["bus", "routes", "chennai", "tambaram", "anna nagar", "ambattur", "fees"]
+  },
+  {
+    "id": "transport_002",
+    "text": "The college campus is conveniently located near Avadi Railway Station (approximately 2 km), which is on the Chennai suburban railway network. Regular MTC (Metropolitan Transport Corporation) buses are available from Avadi bus terminus. Auto-rickshaws and ride-sharing services (Ola, Uber) are readily available near the campus entrance.",
+    "keywords": ["avadi", "railway station", "mtc", "bus", "auto", "ola", "uber"]
+  },
+  {
+    "id": "transport_003",
+    "text": "Bus timings: Morning pickup starts from 7:00 AM at the farthest points with college arrival by 8:45 AM. Evening departure is at 4:30 PM (5:30 PM on lab days). Students must obtain a bus pass from the transport office. Bus routes and fees are announced at the beginning of each academic year. Route changes can be requested through the transport coordinator.",
+    "keywords": ["timing", "morning", "evening", "bus pass", "transport office"]
+  }
+]

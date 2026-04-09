@@ -1,0 +1,22 @@
+[
+  {
+    "id": "clubs_001",
+    "text": "Vel Tech Multi Tech Engineering College has numerous student clubs and societies including: Technical clubs — Coding Club, Robotics Club, AI/ML Club, Electronics Club, and Innovation Hub. Cultural clubs — Music Club, Dance Club, Drama Club, Fine Arts Club, and Photography Club. Students are encouraged to join at least one club during their first year.",
+    "keywords": ["coding club", "robotics", "ai", "music", "dance", "drama", "photography"]
+  },
+  {
+    "id": "clubs_002",
+    "text": "The NSS (National Service Scheme) unit conducts community service activities including blood donation camps, tree plantation drives, village adoption programs, and awareness campaigns. The NCC (National Cadet Corps) unit provides military training and discipline. Both NSS and NCC participation earns activity points and is recognized in the student profile.",
+    "keywords": ["nss", "ncc", "community service", "blood donation", "military training"]
+  },
+  {
+    "id": "clubs_003",
+    "text": "The Entrepreneurship Development Cell (ED Cell) and Innovation Hub support student startups with mentorship, seed funding assistance, and incubation space. Regular startup bootcamps, business plan competitions, and industry mentor sessions are organized. Several student projects have been converted into registered startups through this program.",
+    "keywords": ["entrepreneurship", "startup", "innovation", "incubation", "mentorship", "business"]
+  },
+  {
+    "id": "clubs_004",
+    "text": "The Coding Club organizes weekly coding contests, hackathons, and competitive programming practice sessions. They prepare students for platforms like HackerRank, LeetCode, and CodeChef. The club also conducts workshops on web development, mobile app development, and open-source contribution. Many club members have secured placements at top tech companies.",
+    "keywords": ["coding", "hackathon", "competitive programming", "hackerrank", "leetcode", "web development"]
+  }
+]
