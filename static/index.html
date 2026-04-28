@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VelBot - AI Admissions Counselor for Vel Tech Multi Tech Engineering College, Chennai. Ask about courses, admissions, fees, placements, and campus life.">
+    <meta name="description" content="VelBot - AI Admissions Counselor for Vel Tech Multi Tech Engineering College, Chennai. Ask about courses, admissions, fees, placements, and campus life in Tamil, English, or Tanglish.">
     <title>VelBot — AI Admissions Counselor | Vel Tech Multi Tech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <!-- Language Selector Modal (shown on first load) -->
+    <div class="lang-modal-overlay" id="lang-modal-overlay">
+        <div class="lang-modal glass-panel" id="lang-modal">
+            <div class="lang-modal-icon">🌏</div>
+            <h2 class="lang-modal-title">Hi 👋 Unga preferred language enna?</h2>
+            <p class="lang-modal-subtitle">Choose your language to begin your journey!</p>
+            <div class="lang-modal-buttons">
+                <button class="lang-choice-btn" data-lang="ta" id="lang-btn-ta">
+                    <span class="lang-choice-emoji">🇮🇳</span>
+                    <span class="lang-choice-label">தமிழ்</span>
+                    <span class="lang-choice-sub">Tamil</span>
+                </button>
+                <button class="lang-choice-btn" data-lang="en" id="lang-btn-en">
+                    <span class="lang-choice-emoji">🌍</span>
+                    <span class="lang-choice-label">English</span>
+                    <span class="lang-choice-sub">English</span>
+                </button>
+                <button class="lang-choice-btn" data-lang="tanglish" id="lang-btn-tanglish">
+                    <span class="lang-choice-emoji">🔥</span>
+                    <span class="lang-choice-label">Tanglish</span>
+                    <span class="lang-choice-sub">Mix it up!</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast container for notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
     <div class="app-container" id="app">
         <div class="bg-orbs">
             <div class="orb orb-1"></div>
@@ -20,7 +49,9 @@
 
         <header class="header glass-panel" id="header">
             <div class="header-left">
-                <img src="/static/assets/logo.png" alt="VelBot" class="logo" id="logo">
+                <div class="header-icon-wrap">
+                    <span class="header-icon">🎓</span>
+                </div>
                 <div class="header-text">
                     <h1>VelBot</h1>
                     <p class="subtitle">AI Admissions Counselor</p>
@@ -31,23 +62,35 @@
                     <span class="status-dot"></span>
                     <span class="status-text">Connecting...</span>
                 </div>
-                <div class="lang-badge" id="lang-badge" title="Detected language">EN</div>
+                <button class="mute-toggle" id="mute-toggle" title="Toggle audio">
+                    <svg class="mute-icon-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                    <svg class="mute-icon-off hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                </button>
+                <div class="lang-badge" id="lang-badge" title="Selected language">EN</div>
             </div>
         </header>
 
         <main class="chat-area" id="chat-area">
             <div class="chat-messages" id="chat-messages">
                 <div class="welcome-card glass-panel" id="welcome-card">
-                    <div class="welcome-icon">🎓</div>
-                    <h2>Welcome to Vel Tech Multi Tech</h2>
-                    <p>I'm VelBot, your AI Admissions Counselor. Ask me anything about our college!</p>
+                    <div class="welcome-icon">🚀</div>
+                    <h2 id="welcome-title">Your Dream Career Starts Here!</h2>
+                    <p id="welcome-text">I'm VelBot — your personal AI Admission Counselor. Let me show you why Vel Tech Multi Tech is the BEST choice for your future!</p>
                     <div class="quick-actions" id="quick-actions">
                         <button class="quick-btn" data-query="What courses are offered?">📚 Courses</button>
-                        <button class="quick-btn" data-query="How to apply for admission?">📝 Admissions</button>
-                        <button class="quick-btn" data-query="What are the fees?">💰 Fees</button>
-                        <button class="quick-btn" data-query="Tell me about placements">💼 Placements</button>
-                        <button class="quick-btn" data-query="What hostel facilities are available?">🏠 Hostel</button>
-                        <button class="quick-btn" data-query="What is the campus infrastructure like?">🏛️ Campus</button>
+                        <button class="quick-btn" data-query="How to apply for admission?">📝 Apply Now</button>
+                        <button class="quick-btn" data-query="Tell me about placements and salary packages">💰 Placements</button>
+                        <button class="quick-btn" data-query="What makes Vel Tech Multi Tech special?">⭐ Why Us?</button>
+                        <button class="quick-btn" data-query="What are the fees and scholarships?">🎓 Fees & Aid</button>
+                        <button class="quick-btn" data-query="Tell me about campus life, events, and clubs">🎉 Campus Life</button>
                     </div>
                 </div>
             </div>
@@ -55,15 +98,16 @@
 
         <footer class="input-area glass-panel" id="input-area">
             <div class="input-wrapper">
-                <button class="voice-btn" id="voice-btn" title="Voice input (Chrome recommended)">
+                <button class="voice-btn" id="voice-btn" title="Voice input (beta)">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
                         <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
                         <line x1="12" y1="19" x2="12" y2="23"/>
                         <line x1="8" y1="23" x2="16" y2="23"/>
                     </svg>
+                    <span class="voice-beta-tag">β</span>
                 </button>
-                <input type="text" id="chat-input" placeholder="Ask about courses, admissions, fees, placements..." autocomplete="off" maxlength="500">
+                <input type="text" id="chat-input" placeholder="Ask about courses, admissions, placements..." autocomplete="off" maxlength="500">
                 <button class="send-btn" id="send-btn" title="Send message">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="22" y1="2" x2="11" y2="13"/>
@@ -71,7 +115,7 @@
                     </svg>
                 </button>
             </div>
-            <p class="input-hint">Press Enter to send • Click 🎤 for voice input • Supports Tamil & English</p>
+            <p class="input-hint">Press Enter to send • 🎤 Voice (beta) • Supports Tamil, English & Tanglish</p>
         </footer>
     </div>
 

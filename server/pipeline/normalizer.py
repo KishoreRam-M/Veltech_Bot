@@ -23,18 +23,4 @@ def normalize_query(query: str) -> str:
     text = re.sub(r"\s+", " ", text).strip()
     return text
 
-def compress_query(query: str) -> str:
-    stop_words = {"the", "a", "an", "is", "are", "was", "were", "be", "been",
-                  "being", "have", "has", "had", "do", "does", "did", "will",
-                  "would", "could", "should", "may", "might", "shall", "can",
-                  "of", "in", "to", "for", "with", "on", "at", "from", "by",
-                  "about", "as", "into", "through", "during", "before", "after",
-                  "above", "below", "between", "and", "but", "or", "not", "no",
-                  "this", "that", "these", "those", "i", "me", "my", "we", "our",
-                  "you", "your", "he", "she", "it", "they", "them", "their",
-                  "what", "which", "who", "whom", "how", "when", "where", "why",
-                  "tell", "please", "know", "want", "need", "get", "give",
-                  "some", "any", "all", "each", "every", "much", "many"}
-    words = query.lower().split()
-    keywords = [w for w in words if w not in stop_words and len(w) > 1]
-    return " ".join(keywords[:6]) if keywords else query
+

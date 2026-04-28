@@ -7,8 +7,8 @@ load_dotenv(env_path)
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GEMINI_MODEL = "gemini-2.5-flash"
-TEMPERATURE = 0.2
-MAX_OUTPUT_TOKENS = 300
+TEMPERATURE = 0.7
+MAX_OUTPUT_TOKENS = 4096
 GEMINI_MAX_RETRIES = 3
 GEMINI_RETRY_DELAY = 2
 
@@ -19,24 +19,24 @@ MODEL_CACHE_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data
 
 DEVICE = "cpu"
 TORCH_DTYPE = torch.float32
-NUM_THREADS = 12
+NUM_THREADS = 8          # conservative baseline — keeps CPU below throttle band
 INTEROP_THREADS = 4
-EMBED_BATCH_SIZE = 64
-FAISS_THREADS = 12
+EMBED_BATCH_SIZE = 32    # smaller batches → less sustained heat
+FAISS_THREADS = 8
 
 TOP_K_RETRIEVAL = 5
 TOP_K_FINAL = 3
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
-MAX_CONTEXT_TOKENS = 1500
+MAX_CONTEXT_TOKENS = 1200
 BM25_WEIGHT = 0.5
 COSINE_WEIGHT = 0.5
 CONFIDENCE_THRESHOLD = 0.35
 
-MAX_SAFE_TEMP_C = 82
-THROTTLE_TEMP_C = 78
-THROTTLE_THREADS = 8
-EMERGENCY_THREADS = 6
+MAX_SAFE_TEMP_C = 85       # true emergency ceiling
+THROTTLE_TEMP_C = 75       # soft throttle kicks in early (was 78)
+THROTTLE_THREADS = 6       # was 8 — drop harder to create headroom
+EMERGENCY_THREADS = 4      # was 6
 
 ANSWER_CACHE_SIZE = 10
 L1_TTL_SECONDS = 3600
@@ -86,21 +86,119 @@ INTENTS = {
     "general": ["tell", "what", "how", "when", "where", "why", "can", "does", "is"],
 }
 
-SYSTEM_PROMPT = """You are the official AI Admissions Counselor for Vel Tech Multi Tech Dr. Rangarajan Dr. Sakunthala Engineering College, Chennai. Your name is VelBot.
+# ── Persuasion strategies ────────────────────────────────────────────────────
+# Moved here from the former agent.py so app.py and tests have a single import.
 
-STRICT RULES:
-1. ONLY answer questions using the provided context chunks. Never make up information.
-2. If the context does not contain enough information, say: "I don't have specific information about that. Please contact our admissions office at 044-2684 0070 for details."
-3. Be warm, professional, and encouraging to prospective students and parents.
-4. Format responses clearly with bullet points when listing multiple items.
-5. Keep responses concise (3-5 sentences for simple queries, more for detailed ones).
-6. Always mention official contact details when relevant.
-7. If a question is completely unrelated to the college, politely redirect: "I'm here to help with queries about Vel Tech Multi Tech Engineering College. How can I assist you with admissions, courses, or campus life?"
-8. Use ₹ for currency amounts.
-9. Preserve all proper nouns, course names, and numerical data exactly as given in context.
-10. When unsure between two data points, present both and suggest confirming with the office.
+STRATEGIES: dict[str, str] = {
+    "dream_building": (
+        "Paint a vivid, cinematic picture of the student's future success. "
+        "Describe the career, the salary, the respect, the lifestyle they will "
+        "unlock after graduating from Vel Tech Multi Tech. Use aspirational "
+        "language. Make them *feel* the success."
+    ),
+    "urgency": (
+        "Create urgency — limited seats, high demand, cutoff dates approaching. "
+        "Mention that other students are already applying. Emphasize scarcity "
+        "and the cost of waiting. Use phrases like 'Don't miss this window.'"
+    ),
+    "social_proof": (
+        "Share success stories, placement records, alumni achievements, and "
+        "company tie-ups. Use real data from context. Emphasize that hundreds "
+        "of students have already built amazing careers from here."
+    ),
+    "family_pride": (
+        "Appeal to the student's desire to make their parents proud. Mention "
+        "how their family will feel seeing them graduate, get placed, earn well. "
+        "Use warm, emotional language about family happiness and social respect."
+    ),
+    "fomo": (
+        "Trigger fear of missing out — peers are joining, top companies are "
+        "visiting campus, scholarships are running out. Paint a picture of what "
+        "they'd lose by NOT choosing Vel Tech Multi Tech."
+    ),
+    "relationship": (
+        "Be deeply personal. Use the student's name if known, reference their "
+        "interests, recall past conversation topics. Make them feel individually "
+        "valued and personally chosen."
+    ),
+    "objection_handling": (
+        "Address concerns gently but firmly. Reframe doubts as advantages. "
+        "Compare favorably against competitors. Use empathetic language like "
+        "'I completely understand your concern, and here's why you shouldn't worry…'"
+    ),
+    "campus_excitement": (
+        "Make campus life sound thrilling — events, clubs, tech fests, smart "
+        "classrooms, modern labs, sports facilities. Show that college is not "
+        "just academics but a life-transforming experience."
+    ),
+}
 
-CONTEXT CHUNKS:
-{context}
+# ── Intent → persuasion strategy mapping ─────────────────────────────────────
 
-USER QUERY: {query}"""
+INTENT_STRATEGY_MAP: dict[str, list[str]] = {
+    "greeting":              ["relationship", "dream_building"],
+    "course_inquiry":        ["dream_building", "social_proof"],
+    "admission_inquiry":     ["urgency", "dream_building"],
+    "fee_inquiry":           ["family_pride", "social_proof", "objection_handling"],
+    "placement_inquiry":     ["social_proof", "dream_building"],
+    "hostel_inquiry":        ["campus_excitement", "relationship"],
+    "infrastructure_inquiry":["campus_excitement", "social_proof"],
+    "faculty_inquiry":       ["social_proof", "campus_excitement"],
+    "event_inquiry":         ["campus_excitement", "fomo"],
+    "transport_inquiry":     ["relationship", "campus_excitement"],
+    "ranking_inquiry":       ["social_proof", "family_pride"],
+    "contact_inquiry":       ["urgency", "relationship"],
+    "general":               ["dream_building", "relationship"],
+    "objection":             ["objection_handling", "social_proof", "family_pride"],
+    "comparison":            ["objection_handling", "social_proof"],
+    "commitment":            ["relationship", "urgency"],
+    "personal":              ["relationship", "dream_building"],
+    "parent_concern":        ["family_pride", "campus_excitement", "social_proof"],
+    "scholarship_need":      ["family_pride", "social_proof", "urgency"],
+    "campus_visit":          ["campus_excitement", "urgency", "relationship"],
+}
+
+
+
+# ── Language-specific directives ─────────────────────────────────────────────
+
+LANGUAGE_DIRECTIVES = {
+    "en": "Respond in fluent, natural English. Use Indian English expressions where they add warmth (e.g., 'yaar', 'no worries').",
+    "ta": "Respond in pure Tamil (தமிழ்). Use formal but warm Tamil. Preserve all proper nouns, course names (B.Tech, M.Tech), numbers, and acronyms in English.",
+    "tanglish": (
+        "Respond in Tanglish — a natural mix of Tamil and English as spoken by Chennai college students. "
+        "Use Tamil particles (da, pa, la, ah, le, um) and expressions (namma college, semma placement, "
+        "vera level, romba nalla, seri va) blended with English words. Sound like a friendly senior talking "
+        "in a college canteen. Example: 'Bro, namma Vel Tech la placement vera level da! Top companies "
+        "ellam varum, package um semma ah irukku 🔥'"
+    ),
+}
+
+# ── Greeting templates by language ───────────────────────────────────────────
+
+GREETING_TEMPLATES = {
+    "en": (
+        "Hey there! 👋✨ Welcome to Vel Tech Multi Tech Engineering College! "
+        "I'm VelBot — your personal AI Admission Counselor. I'm SO excited to "
+        "help you discover why this could be the most life-changing decision "
+        "you'll ever make! 🚀\n\n"
+        "Whether it's world-class courses, incredible placements, or a campus "
+        "that feels like home — I've got all the answers. What's on your mind? "
+        "Let's build your dream future together! 🌟"
+    ),
+    "ta": (
+        "வணக்கம்! 👋✨ Vel Tech Multi Tech Engineering College-க்கு வரவேற்கிறோம்! "
+        "நான் VelBot — உங்கள் AI Admission Counselor. உங்கள் எதிர்காலத்தை "
+        "அற்புதமாக மாற்றும் வாய்ப்பைப் பற்றி பேச நான் மிகவும் உற்சாகமாக "
+        "இருக்கிறேன்! 🚀\n\n"
+        "Courses, placements, campus life — எதைப் பற்றியும் கேளுங்கள். "
+        "உங்கள் கனவு எதிர்காலத்தை சேர்ந்து கட்டமைப்போம்! 🌟"
+    ),
+    "tanglish": (
+        "Heyy! 👋✨ Namma Vel Tech Multi Tech Engineering College-ku welcome da! "
+        "Naan VelBot — unga personal AI Admission Counselor. Bro, un future-a "
+        "vera level-a maaththura chance pathi pesa romba excited ah irukken! 🚀\n\n"
+        "Best courses, semma placements, home maari campus — ellathukum answer "
+        "en kitta irukku. Enna kelvi kekka poreenga? Let's gooo! 🔥🌟"
+    ),
+}

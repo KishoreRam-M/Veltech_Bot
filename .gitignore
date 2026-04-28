@@ -1,19 +1,36 @@
-# Python-generated files
+# Python
 __pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
-
-# Virtual environments
-.venv
-
-# Environment
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
 .env
+.pytest_cache/
+.coverage
+htmlcov/
 
-# Logs
+# Node/Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.eslintcache
+
+# Project Specific
+data/models/
+data/audio/
+knowledge/lancedb_store/
 logs/
+*.mp3
+*.webm
 
-# FAISS indices
-*.faiss
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo

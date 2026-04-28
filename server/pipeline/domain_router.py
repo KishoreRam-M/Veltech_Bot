@@ -14,6 +14,14 @@ INTENT_TO_DOMAIN = {
     "ranking_inquiry": ["rankings"],
     "contact_inquiry": ["contact"],
     "general": ["basic_info"],
+    # Persuasion intents → domain routing
+    "objection": ["placements", "rankings", "fees"],
+    "comparison": ["rankings", "placements", "basic_info"],
+    "commitment": ["admission", "contact"],
+    "personal": ["basic_info", "courses"],
+    "parent_concern": ["health_safety", "hostel", "infrastructure"],
+    "scholarship_need": ["fees", "admission"],
+    "campus_visit": ["infrastructure", "contact", "events"],
 }
 
 def route_domain(query: str, intent: str) -> list[str]:

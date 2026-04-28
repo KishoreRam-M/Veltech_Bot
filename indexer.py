@@ -2,9 +2,8 @@ import intel_setup
 
 import os
 import json
-import pickle
 import numpy as np
-import faiss
+import lancedb
 from sentence_transformers import SentenceTransformer
 
 import sys
@@ -19,6 +18,10 @@ def run_indexer():
         device="cpu",
         cache_folder=MODEL_CACHE_DIR,
     )
+
+    db_path = os.path.join(KNOWLEDGE_DIR, "lancedb_store")
+    os.makedirs(db_path, exist_ok=True)
+    db = lancedb.connect(db_path)
 
     for domain_name, cfg in DOMAINS.items():
         filepath = os.path.join(KNOWLEDGE_DIR, cfg["file"])
@@ -42,22 +45,17 @@ def run_indexer():
             convert_to_numpy=True,
             show_progress_bar=True,
         )
-        embeddings = np.array(embeddings, dtype=np.float32)
 
-        emb_path = os.path.join(KNOWLEDGE_DIR, f"{domain_name}.npy")
-        meta_path = os.path.join(KNOWLEDGE_DIR, f"{domain_name}_meta.pkl")
-        faiss_path = os.path.join(KNOWLEDGE_DIR, f"{domain_name}.faiss")
+        data = []
+        for i, (chunk, emb) in enumerate(zip(chunks, embeddings)):
+            # LanceDB expects the embedding in a column named 'vector'
+            row = chunk.copy()
+            row["vector"] = emb.tolist()
+            row["chunk_id"] = i
+            data.append(row)
 
-        np.save(emb_path, embeddings)
-        with open(meta_path, "wb") as f:
-            pickle.dump(chunks, f)
-
-        dim = embeddings.shape[1]
-        index = faiss.IndexFlatIP(dim)
-        index.add(embeddings)
-        faiss.write_index(index, faiss_path)
-
-        print(f"[INDEXER] Saved {domain_name} -> {emb_path}, {meta_path}, {faiss_path}")
+        db.create_table(domain_name, data=data, mode="overwrite")
+        print(f"[INDEXER] Saved {domain_name} -> LanceDB table '{domain_name}'")
 
 if __name__ == "__main__":
     run_indexer()
